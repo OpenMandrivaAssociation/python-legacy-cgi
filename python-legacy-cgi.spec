@@ -7,6 +7,7 @@ URL:		https://pypi.org/project/legacy-cgi/
 License:	None
 Group:		Development/Python
 BuildSystem:	python
+BuildRequires:	python%{pyver}dist(hatchling)
 BuildArch:	noarch
 
 %description
