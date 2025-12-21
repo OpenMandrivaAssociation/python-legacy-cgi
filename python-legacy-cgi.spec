@@ -10,11 +10,19 @@ BuildSystem:	python
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildArch:	noarch
 
+%patchlist
+python-legacy-cgi-remove-comment-about-quirk-we-are-removing.patch
+
 %description
 Fork of the standard library cgi and cgitb modules removed in Python 3.13
 
 This package is deprecated and for compatibility with previous versions
 only. It may be removed from future releases without further notice.
+
+%if "%{_bindir}" != "/usr/local/bin"
+%prep -a
+sed -i -e 's,/usr/local/bin/python,%{_bindir}/python,g' cgi.py
+%endif
 
 %files
 %{py_sitedir}/cgi.py

@@ -1,0 +1,18 @@
+diff -up python-legacy-cgi-2.6.4/cgi.py.omv~ python-legacy-cgi-2.6.4/cgi.py
+--- python-legacy-cgi-2.6.4/cgi.py.omv~	2025-12-21 08:43:40.890704518 +0100
++++ python-legacy-cgi-2.6.4/cgi.py	2025-12-21 08:43:45.150395252 +0100
+@@ -1,14 +1,5 @@
+ #! /usr/local/bin/python
+ 
+-# NOTE: the above "/usr/local/bin/python" is NOT a mistake.  It is
+-# intentionally NOT "/usr/bin/env python".  On many systems
+-# (e.g. Solaris), /usr/local/bin is not in $PATH as passed to CGI
+-# scripts, and /usr/local/bin is the default directory where Python is
+-# installed, so /usr/bin/env would be unable to find python.  Granted,
+-# binary installations by Linux vendors often install Python in
+-# /usr/bin.  So let those vendors patch cgi.py to match their choice
+-# of installation.
+-
+ """Support module for CGI (Common Gateway Interface) scripts.
+ 
+ This module defines a number of utilities for use by CGI scripts
