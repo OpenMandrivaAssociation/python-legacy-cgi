@@ -1,6 +1,6 @@
 Name:		python-legacy-cgi
 Version:	2.6.4
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/l/legacy_cgi/legacy_cgi-%{version}.tar.gz
 Summary:	Fork of the standard library cgi and cgitb modules removed in Python 3.13
 URL:		https://pypi.org/project/legacy-cgi/
